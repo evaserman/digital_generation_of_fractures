@@ -49,7 +49,7 @@ L        = 1;  % Fracture length (for now this code is scale ignorant -->
 
 % CHECK THE FUNCTION INPUTS
 % Check number of inputs
-if nargin <6 | nargin > 8
+if nargin <6 | nargin > 8 %#ok<*OR2> 
     error('Upsss... incorrect number of inputs. Check the function definition');
 end
 % Apply default values
@@ -111,7 +111,7 @@ myStream2 = RandStream('mt19937ar', 'Seed', MaxSeed * rand(myStream1));
 dx          = L/N;                                % Sample interval
 Nyq         = 1/(2*dx);                           % Nyquist of data
 dq          = 1/(N*dx);                           % Wavenumber increment
-wavenumbers = 2 * pi * [-Nyq : dq : Nyq-dq];      % 1D Wavenumbers     
+wavenumbers = 2 * pi * [-Nyq : dq : Nyq-dq];      %#ok<*NBRAK> % 1D Wavenumbers     
 [qx, qy]    = meshgrid(wavenumbers);              % 2D Wavenumbers [m^-1]
 q           = (qx.^2 + (qy/aniso).^2).^0.5;       % Wavenumber modulus (Apply here the anisotropy conditions)
 lambda      = 2*pi ./ q;                          % Wavelengths modulus

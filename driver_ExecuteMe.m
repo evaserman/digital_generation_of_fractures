@@ -30,7 +30,6 @@ aniso     : anisotropy ratio                                                    
 seed      : Random number seed (phase generation)                               [+ve integer]
 lambda_0  : Roll-ff wavelenth                                                   [0<lambda_0<1]
 model     : Power spectal density model                                         ['linear', 'linear', 'bilinear', 'smooth']
-
 %}
 [L, N, dx, H, roughness, mismatch, aniso, seed, lambda_0, model] = fracture_definition_inputs();
 % Model outputs
